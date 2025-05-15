@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(to right, #260000, #000000); /* Gradient from top to bottom */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh; /* Set the height of the body to the full viewport height */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Heading {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    margin-top: 30px;
+    position: relative; /* Ensure the header can be animated */
+    animation: slideDown 0.4s ease-out; /* Apply the animation */
+}
+.Heading_Logo {
+    display: flex;
+    font-size: 30px;
+    color: white;   
+    padding-bottom: 5px;
+    align-items: left;
+    font-weight: bold;
+    padding-left: 25px;
+}
+.Heading_Info {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    gap: 50px;
+    padding-right: 25px;
+}
+.Heading_Info span:hover {
+    cursor: pointer;
+    color: goldenrod;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.Main { 
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 250px;
+    padding-left: 300px;
+    color: white;
+    margin-left: 20px;
+    animation: slideInFromLeft 0.6s ease-out forwards; /* Apply the animation */
+}
+.Main_Hello {
+    font-size: 20px;
+    display: block;
+    position: absolute; 
+    top: 10px;
+    color: goldenrod;
+}
+.Main_p1 {
+    font-size: 50px;
+    
+}
+.Main_name {
+    font-size: 50px;
+    color: goldenrod;
+
+}
+.Main_p2 {
+    font-size: 25px;
+    display: block;
+    position: absolute;
+    top: 170px;
+
+}
+.Image_Container {
+    position: absolute; 
+    top: 25%; 
+    right: 10px; 
+    width: 350px;
+    height: 400px;
+    padding-right: 180px;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    animation: slideInfromRight 0.6s ease-out forwards; /* Apply the animation */
+}
+.Header_Image {
+    width: 400px;
+    height: auto; 
+    border-radius: 10px; 
+    object-fit: cover; /* Crops the image to fit the container */
+}
+.Animaton_arrow {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    top: 85%;
+    left: 50%;
+    animation: arrow 500ms linear infinite alternate-reverse;
+}
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translate(-100%, -50%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translate(0, -50%); /* End at its original position */
+    }
+}
+
